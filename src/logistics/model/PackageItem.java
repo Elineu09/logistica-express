@@ -1,16 +1,17 @@
 package logistics.model;
 
 public class PackageItem {
-        private int weight;
-        private int value;
 
-    public PackageItem(int weigth, int value) {
-        this.weigth = weigth;
+    private int weight;
+    private int value;
+
+    public PackageItem(int weight, int value) {
+        this.weight = weight;
         this.value = value;
     }
 
-    public int getWeigth() {
-        return weigth;
+    public int getWeight() {
+        return weight;
     }
 
     public int getValue() {
