@@ -26,15 +26,12 @@ public class DataLoader {
 
         try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 
-            // Read truck capacity (first line)
             capacity = Integer.parseInt(br.readLine().trim());
 
             String line;
 
-            // Read packages
             while ((line = br.readLine()) != null) {
 
-                // Format: weight,value
                 String[] parts = line.split(",");
 
                 int weight = Integer.parseInt(parts[0].trim());

@@ -19,7 +19,7 @@ public class PerformanceMonitor {
         double timeMs = (endTime - startTime) / 1_000_000.0;
         double memoryMB = (endMemory - startMemory) / (1024.0 * 1024.0);
 
-        System.out.println("Tempo de execução: " + timeMs + " ms");
-        System.out.println("Memória utilizada: " + memoryMB + " MB");
+        System.out.println("Tempo de execução: " + String.format("%.2f",timeMs) + " ms");
+        System.out.println("Memória utilizada: " + String.format("%.2f",memoryMB) + " MB");
     }
 }

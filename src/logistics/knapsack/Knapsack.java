@@ -47,8 +47,6 @@ public class Knapsack {
 
         return new Result(dp[n][capacity], selectedItems);
     }
-
-    // Resultado da mochila
     public static class Result {
         private final int maxValue;
         private final List<PackageItem> selectedItems;
@@ -64,6 +62,21 @@ public class Knapsack {
 
         public List<PackageItem> getSelectedItems() {
             return selectedItems;
+        }
+ 
+        public void display() {
+            int totalWeight = 0;
+
+            System.out.println("\n\n###### RESULTADO ######");
+            System.out.println("Valor económico máximo: $" + maxValue);
+
+            for (PackageItem item : selectedItems){
+                System.out.println("Item: " + item.getWeight() + "KG => $" + item.getValue());
+                totalWeight += item.getWeight();
+            }
+
+            System.out.println("Peso total transportado: " + totalWeight + "KG");
+
         }
     }
 }
